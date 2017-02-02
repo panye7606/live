@@ -2,6 +2,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>庄爱华是大笨蛋！！！</h2>
+<h2>This is welcome page</h2>
 </body>
 </html>

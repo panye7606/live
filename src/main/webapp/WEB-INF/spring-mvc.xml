@@ -11,10 +11,10 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- 启用spring mvc 注解 -->
-    <!--<context:annotation-config />-->
+    <!-- 启用spring注解, @Autowired等 -->
+    <context:annotation-config />
 
-    <!--启用 MVC注解(@Controller,@RequestMapping)实现URL映射-->
+    <!-- 将参数绑定到controller方法中 -->
     <mvc:annotation-driven />
 
     <!-- 设置使用注解的类所在的包 -->

@@ -3,11 +3,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Spring MVC1111111</title>
+    <title>Spring MVC Demo</title>
 </head>
 <body>
 
-<h1>Welcome</h1>
+<h1>hello</h1>
 
 </body>
 </html>
