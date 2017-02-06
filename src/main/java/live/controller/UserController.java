@@ -22,6 +22,7 @@ public class UserController {
     @RequestMapping("/")
     public String index() {
         List<User> users = userService.getUsers();
+        userService.test();
         return "hello";
     }
 
