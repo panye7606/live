@@ -1,7 +1,7 @@
 package live.controller;
 
-import live.model.User;
-import live.service.UserService;
+import live.model.Live;
+import live.service.LiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,17 +13,16 @@ import java.util.List;
  */
 
 @Controller
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/lives")
+public class LiveController {
 
     @Autowired
-    private UserService userService;
+    private LiveService liveService;
 
-    @RequestMapping("/")
+    @RequestMapping("")
     public String index() {
-        List<User> users = userService.getUsers();
-        userService.test();
-        return "hello";
+        List<Live> lives = liveService.getLives();
+        return "live/index";
     }
 
 }

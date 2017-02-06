@@ -1,6 +1,6 @@
 package live.dao;
 
-import live.model.User;
+import live.model.Live;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  */
 
 @Repository
-public interface UserDao {
+public interface LiveDao {
 
-    List<User> getUsers();
+    List<Live> getLives();
 }

@@ -3,11 +3,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Spring MVC Demo</title>
+    <title>直播列表</title>
 </head>
 <body>
 
-<h1>hello</h1>
+<h1>
+
+</h1>
 
 </body>
 </html>

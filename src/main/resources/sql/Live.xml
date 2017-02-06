@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="live.dao.UserDao">
+<mapper namespace="live.dao.LiveDao">
 
     <!--<insert id="save" parameterType="com.niuniu.entity.User">-->
         <!--insert into cn_user(-->
@@ -12,8 +12,8 @@
         <!--values(#{cn_user_id},#{cn_user_name},#{cn_user_password},#{cn_user_token},#{cn_user_nick})-->
     <!--</insert>-->
 
-    <select id="getUsers" resultType="live.model.User">
-        select * from users;
+    <select id="getLives" resultType="live.model.Live">
+        select * from lives;
     </select>
 
 </mapper>
