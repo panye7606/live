@@ -1,0 +1,103 @@
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.live {
+    width: 100%;
+}
+
+.live ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.live ul li {
+    width: 280px;
+    height: 197px;
+    list-style-type: none;
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 20px;
+}
+
+.live ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.live a img {
+    width: 280px;
+    height: 157px;
+}
+
+.mes {
+    width: 280px;
+    height: 40px;
+}
+
+.mes div {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.mes .nick {
+    width: 141px;
+    float: left;
+    overflow: hidden;
+}
+
+.mes .platform {
+    width: 60px;
+    float: left;
+}
+
+.mes .num {
+    float: right;
+}
+
+/* 顶部导航栏 */
+
+.head {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.head-nav {
+    margin: 40px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.head-nav li {
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    list-style-type: none;
+    margin-right: 20px;
+    float: left;
+}
+
+.head-nav > li:not(.current) > a:hover {
+    cursor: pointer;
+    color: #ff630e;
+}
+
+.head-nav > li > a {
+    font-family: monospace;
+    color: #444;
+    text-decoration: none;
+}
+
+.current {
+    background: #ff630e;
+    border-radius: 3px;
+}
+
+.head-nav .current a {
+    color: #fff;
+}

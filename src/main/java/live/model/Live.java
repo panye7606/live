@@ -9,11 +9,13 @@ public class Live implements Serializable {
 
     private int id;
 
-    private String title;
+    private String platform;
 
     private String anchor;
 
     private String url;
+
+    private String imgUrl;
 
     private int num;
 
@@ -23,14 +25,6 @@ public class Live implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getAnchor() {
@@ -55,5 +49,21 @@ public class Live implements Serializable {
 
     public void setNum(int num) {
         this.num = num;
+    }
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }
