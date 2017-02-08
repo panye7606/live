@@ -12,4 +12,5 @@ public interface LiveService {
 
     List<Live> getLives();
 
+    boolean add(Live live);
 }

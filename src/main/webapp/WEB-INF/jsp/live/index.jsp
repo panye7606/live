@@ -11,6 +11,9 @@
     <body>
 
         <div class="wrap">
+            <p>
+                <a href="/lives/edit">新增直播</a>
+            </p>
             <div class="live">
                 <ul>
                     <c:forEach items="${lives}" var="live">

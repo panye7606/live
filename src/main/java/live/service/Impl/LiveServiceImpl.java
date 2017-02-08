@@ -23,4 +23,9 @@ public class LiveServiceImpl implements LiveService {
         return lives;
     }
 
+    public boolean add(Live live) {
+        return liveDao.add(live);
+    }
+
+
 }

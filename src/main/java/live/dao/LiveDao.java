@@ -2,7 +2,6 @@ package live.dao;
 
 import live.model.Live;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 /**
@@ -13,4 +12,6 @@ import java.util.List;
 public interface LiveDao {
 
     List<Live> getLives();
+
+    boolean add(Live live);
 }

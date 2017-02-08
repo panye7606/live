@@ -66,4 +66,16 @@ public class Live implements Serializable {
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
+
+    @Override
+    public String toString() {
+        return "Live{" +
+                "id=" + id +
+                ", platform='" + platform + '\'' +
+                ", anchor='" + anchor + '\'' +
+                ", url='" + url + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", num=" + num +
+                '}';
+    }
 }
