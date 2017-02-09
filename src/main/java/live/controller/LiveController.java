@@ -25,6 +25,12 @@ public class LiveController {
         return "live/index";
     }
 
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public String create(Live live) {
+        liveService.add(live);
+        return "redirect:/lives";
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String add() {
         return "live/add";
@@ -43,9 +49,9 @@ public class LiveController {
         return "redirect:/lives";
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    public String create(Live live) {
-        liveService.add(live);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String delete(@PathVariable("id") int id) {
+        liveService.delete(id);
         return "redirect:/lives";
     }
 

@@ -14,4 +14,6 @@ public interface LiveDao {
     Live getById(int id);
 
     boolean update(Live live);
+
+    boolean delete(int id);
 }

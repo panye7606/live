@@ -33,4 +33,9 @@ public class LiveServiceImpl implements LiveService {
         return result;
     }
 
+    public boolean delete(int id) {
+        boolean result = liveDao.delete(id);
+        return result;
+    }
+
 }

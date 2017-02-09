@@ -39,4 +39,8 @@
         where id = #{id}
     </update>
 
+    <delete id="delete" parameterType="int">
+        delete from users where id = #{id}
+    </delete>
+
 </mapper>
