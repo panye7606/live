@@ -12,7 +12,7 @@
 
         <div class="wrap">
             <p>
-                <a href="/lives/edit">新增直播</a>
+                <a href="/lives/new">新增直播</a>
             </p>
             <div class="live">
                 <ul>
@@ -21,6 +21,7 @@
                             <a href="${live.url}" target="_blank">
                                 <img src="${live.imgUrl}" alt="" />
                             </a>
+                            <a href="/lives/${live.id}/edit">编辑</a>
                             <div class="mes">
                                 <div class="nick">${live.anchor}</div>
                                 <div class="platform">${live.platform}</div>

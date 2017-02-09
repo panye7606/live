@@ -29,6 +29,17 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <!-- 使得put delete方法能够使用 -->
+  <filter>
+    <filter-name>HiddenHttpMethodFilter</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>HiddenHttpMethodFilter</filter-name>
+    <servlet-name>DispatcherServlet</servlet-name>
+  </filter-mapping>
+
   <!-- Spring配置 -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

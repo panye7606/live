@@ -8,10 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by rcer on 17/2/3.
- */
-
 @Service
 public class LiveServiceImpl implements LiveService {
 
@@ -27,5 +23,14 @@ public class LiveServiceImpl implements LiveService {
         return liveDao.add(live);
     }
 
+    public Live getById(int id) {
+        Live live = liveDao.getById(id);
+        return live;
+    }
+
+    public boolean update(Live live) {
+        boolean result = liveDao.update(live);
+        return result;
+    }
 
 }
