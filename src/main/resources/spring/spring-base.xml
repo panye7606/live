@@ -10,7 +10,7 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="live.*"></context:component-scan>
+    <context:component-scan base-package="live.dao, live.model, live.service"></context:component-scan>
 
     <context:component-scan base-package="live.controller">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />

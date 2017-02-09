@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="live.dao.LiveDao">
 
-    <insert id="add" parameterType="live.model.Live">
+    <insert id="add" parameterType="live.model.Live" useGeneratedKeys="true">
         insert into lives (
           platform,
           anchor,
