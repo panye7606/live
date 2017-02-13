@@ -17,7 +17,7 @@ public class Live implements Serializable {
 
     private String imgUrl;
 
-    private int num;
+    private Integer num;
 
     public int getId() {
         return id;
@@ -43,11 +43,11 @@ public class Live implements Serializable {
         this.url = url;
     }
 
-    public int getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 

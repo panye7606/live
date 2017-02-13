@@ -35,7 +35,7 @@
 
         <div class="wrap">
             <p>
-                <a href="/lives/new">新增直播</a>
+                <a href="/lives/add">新增直播</a>
             </p>
             <div class="live">
                 <ul>

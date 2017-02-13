@@ -6,10 +6,7 @@ import live.service.LiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,15 +24,15 @@ public class LiveController {
         return "live/index";
     }
 
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public String add() {
+        return "live/add";
+    }
+
     @RequestMapping(value = "", method = RequestMethod.POST)
     public String create(Live live) {
         liveService.add(live);
         return "redirect:/lives";
-    }
-
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String add() {
-        return "live/add";
     }
 
     @RequestMapping(value = "/{id}/edit", method = RequestMethod.GET)
