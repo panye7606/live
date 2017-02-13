@@ -3,11 +3,34 @@
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <meta charset="UTF-8">
-    <title>直播列表</title>
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
+        <meta charset="UTF-8">
+        <title>直播列表</title>
+        <script type="text/javascript">
+            $(function() {
+                $(document).on("click", "#delete", deleteLive);
+            });
+
+            function deleteLive() {
+                if (confirm("确定删除?")) {
+                    var id = $(this).data("id");
+                    $.ajax({
+                        type: "DELETE",
+                        dataType: "json",
+                        url: "/lives/" + id,
+                        success: function (data) {
+                            console.log(data);
+                            if (0 == data.status) {
+                                window.location.reload();
+                            }
+                        }
+                    });
+                }
+            }
+        </script>
+    </head>
     <body>
 
         <div class="wrap">
@@ -22,6 +45,7 @@
                                 <img src="${live.imgUrl}" alt="" />
                             </a>
                             <a href="/lives/${live.id}/edit">编辑</a>
+                            <button id="delete" data-id="${live.id}">删除</button>
                             <div class="mes">
                                 <div class="nick">${live.anchor}</div>
                                 <div class="platform">${live.platform}</div>
@@ -34,4 +58,6 @@
         </div>
 
     </body>
+
+
 </html>

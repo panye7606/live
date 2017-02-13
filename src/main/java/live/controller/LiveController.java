@@ -1,5 +1,6 @@
 package live.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import live.model.Live;
 import live.service.LiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -49,10 +51,17 @@ public class LiveController {
         return "redirect:/lives";
     }
 
+    @ResponseBody
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String delete(@PathVariable("id") int id) {
-        liveService.delete(id);
-        return "redirect:/lives";
+    public JSONObject delete(@PathVariable("id") int id) {
+        JSONObject rsp = new JSONObject();
+        boolean result = liveService.delete(id);
+        if (result) {
+            rsp.put("status", 0);
+        } else {
+            rsp.put("status", -1);
+        }
+        return rsp;
     }
 
 }

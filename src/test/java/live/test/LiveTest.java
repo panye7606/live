@@ -17,9 +17,15 @@ public class LiveTest extends BaseTest {
     private LiveService liveService;
 
     @Test
-    public void test() {
+    public void getLives() {
         List<Live> lives = liveService.getLives();
         System.out.println(lives.size());
+    }
+
+    @Test
+    public void deleteLive() {
+        boolean result = liveService.delete(5);
+        System.out.println(result);
     }
 }
 
