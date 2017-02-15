@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="live.dao.ClazzDAO">
+
+    <sql id="table">
+        tb_clazz
+    </sql>
+
+    <resultMap id="clazzResultMap" type="Clazz">
+        <id property="id" column="id"/>
+
+        <result property="code" column="code"/>
+
+        <!-- 获取集合, column表示传入select的参数 -->
+        <collection property="students" javaType="ArrayList" ofType="Student" column="id" select="live.dao.StudentDAO.getById"/>
+    </resultMap>
+
+    <select id="getClazzs" resultMap="clazzResultMap">
+        select *
+        from <include refid="table"/>
+    </select>
+
+    <select id="getById" resultType="Clazz">
+        select *
+        from <include refid="table"/>
+        where id = #{id}
+    </select>
+
+</mapper>
