@@ -1,6 +1,7 @@
 package live.service;
 
 import live.model.Student;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,4 +12,8 @@ import java.util.List;
 public interface StudentService {
 
     List<Student> getStudents();
+
+    List<Student> getByName(String name);
+
+    List<Student> getByNameAndSex(String name, String sex);
 }

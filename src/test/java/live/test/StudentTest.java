@@ -25,4 +25,30 @@ public class StudentTest extends BaseTest {
         }
     }
 
+    @Test
+    public void getByName() {
+        List<Student> students = studentService.getByName("rose");
+        for (Student s : students) {
+            System.out.println("=========" + s.toString() + "=============");
+        }
+    }
+
+    @Test
+    public void getByNameAndSex() {
+        List<Student> students = studentService.getByNameAndSex("", "女");
+        for (Student s : students) {
+            System.out.println("=========" + s.toString() + "=============");
+        }
+
+        students = studentService.getByNameAndSex("rose", "");
+        for (Student s : students) {
+            System.out.println("=========" + s.toString() + "=============");
+        }
+
+        students = studentService.getByNameAndSex("rose", "女");
+        for (Student s : students) {
+            System.out.println("=========" + s.toString() + "=============");
+        }
+    }
+
 }

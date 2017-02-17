@@ -39,4 +39,30 @@
         where clazz_id = #{id}
     </select>
 
+    <select id="getByName" resultType="Student" parameterType="java.lang.String">
+        select *
+        from
+            <include refid="table"/>
+        <where>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+
+    <select id="getByNameAndSex" resultType="Student">
+        select *
+        from
+        <include refid="table"/>
+        <where>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="sex != null and sex != ''">
+                and sex = #{sex}
+            </if>
+        </where>
+
+    </select>
+
 </mapper>

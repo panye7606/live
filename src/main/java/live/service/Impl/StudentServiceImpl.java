@@ -22,4 +22,14 @@ public class StudentServiceImpl implements StudentService {
         List<Student> students = studentDAO.getStudents();
         return students;
     }
+
+    public List<Student> getByName(String name) {
+        List<Student> students = studentDAO.getByName(name);
+        return students;
+    }
+
+    public List<Student> getByNameAndSex(String name, String sex) {
+        List<Student> students = studentDAO.getByNameAndSex(name, sex);
+        return students;
+    }
 }
