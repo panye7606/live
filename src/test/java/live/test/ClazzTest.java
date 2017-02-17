@@ -23,6 +23,7 @@ public class ClazzTest extends BaseTest {
 
         for (Clazz c : clazzs) {
             System.out.println(c.toString());
+            System.out.println("======= size"+ c.getStudents().size() + "=============");
 
             List<Student> students = c.getStudents();
 

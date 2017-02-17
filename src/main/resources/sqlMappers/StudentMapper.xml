@@ -29,6 +29,14 @@
         from
             <include refid="table"/>
         where id = #{id}
+        limit 1
+    </select>
+
+    <select id="getByClazzId" resultType="Student">
+        select *
+        from
+            <include refid="table"/>
+        where clazz_id = #{id}
     </select>
 
 </mapper>
