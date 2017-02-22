@@ -11,5 +11,6 @@
         <typeAlias type="live.model.Live" alias="Live" />
         <typeAlias type="live.model.Student" alias="Student" />
         <typeAlias type="live.model.Clazz" alias="Clazz" />
+        <typeAlias type="live.model.Uploader" alias="Uploader" />
     </typeAliases>
 </configuration>
