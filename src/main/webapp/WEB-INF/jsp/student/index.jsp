@@ -8,6 +8,21 @@
         <script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
         <meta charset="UTF-8">
         <title>学生列表</title>
+        <script type="text/javascript">
+            $(function() {
+                $.ajax({
+                    type: "POST",
+                    dataType: "JSON",
+                    url: "/json/getStudentJson",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({id: 1, name: "james", sex: "male", age: 20}),
+                    async: true,
+                    success: function(data) {
+                        alert(data.msg);
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
 
