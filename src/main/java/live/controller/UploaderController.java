@@ -64,7 +64,7 @@ public class UploaderController {
 
                 uploaderService.add(uploader);
 
-                return "redirect:uploader/index";
+                return "redirect:/file/index";
 
             }
         } catch (Exception e) {
@@ -82,6 +82,7 @@ public class UploaderController {
 
         File file = new File(path + File.separator + filename);
 
+        // tomcat编码已经设置为utf-8, 所以这里可以不用加上utf-8, 否则应与tomcat同步
         String downloadFileName = new String(filename.getBytes("UTF-8"), "iso-8859-1");
 
         HttpHeaders headers = new HttpHeaders();
