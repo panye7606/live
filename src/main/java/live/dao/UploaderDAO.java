@@ -1,8 +1,8 @@
 package live.dao;
 
 import live.model.Uploader;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 /**
  * @Author rcer
@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UploaderDAO {
+
+    List<Uploader> getUploaders();
 
     boolean add(Uploader uploader);
 }

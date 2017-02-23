@@ -15,6 +15,13 @@
         file_path
     </sql>
 
+    <select id="getUploaders" resultType="Uploader">
+        select
+        <include refid="tableFields"/>
+        from
+        <include refid="table"/>
+    </select>
+
     <insert id="add" parameterType="Uploader" useGeneratedKeys="true">
         insert into
         <include refid="table"/>
