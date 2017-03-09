@@ -12,7 +12,7 @@
 
     <aop:aspectj-autoproxy />
 
-    <context:component-scan base-package="live.model, live.dao, live.service.*, live.aspect"></context:component-scan>
+    <context:component-scan base-package="live.model, live.service.Impl, live.aspect"></context:component-scan>
 
     <context:component-scan base-package="live.controller">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
