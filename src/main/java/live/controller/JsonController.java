@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.sun.javafx.tools.resource.DeployResource.Type.data;
-
 /**
  * @Author rcer
  * @Date 17/2/18 下午2:18
